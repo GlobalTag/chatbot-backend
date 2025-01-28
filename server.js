@@ -40,7 +40,7 @@ async function scrapeWebsite(query) {
 // Endpoint per rispondere alle richieste del chatbot
 app.post('/api/query', async (req, res) => {
   const { query } = req.body;
-  console.log(`Query ricevuta: ${query}`);
+  console.log(Query ricevuta: ${query});
 
   const response = await scrapeWebsite(query);
   res.json({ response });
@@ -49,4 +49,5 @@ app.post('/api/query', async (req, res) => {
 // Porta del server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server in ascolto sulla porta ${PORT}`
+  console.log(Server in ascolto sulla porta ${PORT});
+});
